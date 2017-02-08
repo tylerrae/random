@@ -5,7 +5,29 @@ var namespace = "http://www.w3.org/2000/svg"
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createFirstScene() {
-    
+var rando = Math.random()
+if (rando < 0.33){
+makeRect(0,0, 1000, 1000, "white")
+makePolygon("100,10 80,20 120,20", "#ffcccc")
+makePolygon("100,35 80,22 120,22", "#ffd9cc")
+makePolygon("122,22 102,35 140,22", "#ffe6cc")
+makePolygon("140,24 102,37 122,42", "#fff2cc")
+makePolygon("78,22 98,35 60,22", "#ffffcc")
+makePolygon("60,24 98,37 78,42", "#f2ffcc")
+makePolygon("100,37 80,42 120,42", "#e6ffcc")
+makePolygon("100,95 80,44 120,44", "#d9ffcc")
+} else {
+makeRect(0,0, 1000, 1000, "white")
+makePolygon("100,10 80,20 120,20", "#f6d5d5")
+makePolygon("100,35 80,22 120,22", "#f5d6d6")
+makePolygon("122,22 102,35 140,22", "#f4d7d7")
+makePolygon("140,24 102,37 122,42", "#f2d9d9")
+makePolygon("78,22 98,35 60,22", "#f1dada")
+makePolygon("60,24 98,37 78,42", "#f0dbdb")
+makePolygon("100,37 80,42 120,42", "#eedddd")
+makePolygon("100,95 80,44 120,44", "#eddede")
+}
+ 
 }
 
 
@@ -13,6 +35,28 @@ function createFirstScene() {
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createSecondScene() {
+var ran = Math.random()
+if (ran < 0.33) {
+makeRect(0,0, 1000, 1000, "white")
+makePolygon("100,10 80,20 120,20", "#ccffcc")
+makePolygon("100,35 80,22 120,22", "#ccffd9")
+makePolygon("122,22 102,35 140,22", "#ccffe6")
+makePolygon("140,24 102,37 122,42", "#ccfff2")
+makePolygon("78,22 98,35 60,22", "#ccffff")
+makePolygon("60,24 98,37 78,42", "#ccf2ff")
+makePolygon("100,37 80,42 120,42", "#cce6ff")
+makePolygon("100,95 80,44 120,44", "#ccd9ff")  
+} else {
+makeRect(0,0, 1000, 1000, "white")
+makePolygon("100,10 80,20 120,20", "#B2004C", 0.5)
+makePolygon("100,35 80,22 120,22", "#A60059", 0.5)
+makePolygon("122,22 102,35 140,22", "#990066", 0.5)
+makePolygon("140,24 102,37 122,42", "#8C0073", 0.5)
+makePolygon("78,22 98,35 60,22", "#800080", 0.5)
+makePolygon("60,24 98,37 78,42", "#73008C", 0.5)
+makePolygon("100,37 80,42 120,42", "#660099", 0.5)
+makePolygon("100,95 80,44 120,44", "#5900A6", 0.5) 
+}
     
 }
 
@@ -21,7 +65,28 @@ function createSecondScene() {
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createThirdScene() {
-    
+var rand = Math.random()
+if (rand < 0.33) {
+makeRect(0,0, 1000, 1000, "white")
+makePolygon("100,10 80,20 120,20", "#ccccff")
+makePolygon("100,35 80,22 120,22", "#d9ccff")
+makePolygon("122,22 102,35 140,22", "#e6ccff")
+makePolygon("140,24 102,37 122,42", "#e6ccff")
+makePolygon("78,22 98,35 60,22", "#f2ccff")
+makePolygon("60,24 98,37 78,42", "#ffccff")
+makePolygon("100,37 80,42 120,42", "#ffccf2")
+makePolygon("100,95 80,44 120,44", "#ffccae")
+} else {
+makeRect(0,0, 1000, 1000, "white")
+makePolygon("100,10 80,20 120,20", "#FF997D")
+makePolygon("100,35 80,22 120,22", "#FF9985")
+makePolygon("122,22 102,35 140,22", "#FF998C")
+makePolygon("140,24 102,37 122,42", "#FF9994")
+makePolygon("78,22 98,35 60,22", "#FF999C")
+makePolygon("60,24 98,37 78,42", "#FF99A3")
+makePolygon("100,37 80,42 120,42", "#FF99AB")
+makePolygon("100,95 80,44 120,44", "#FF99B2") 
+}
 }
 
 
@@ -32,17 +97,23 @@ function createThirdScene() {
 // This function is called whenever you press the "Go!" button.
 function createRandomScene() {
     // Generate a random number between 0 and 1, and store it in a variable.
-    
+    var number = Math.random()
     // If the number is less than 0.33, call the function to create your first scene.
-    
+    if (number < 0.33) {
+        createFirstScene()
+    }
     
     
     // Else, if the number is less than 0.67, call the function to create your second scene.
-    
+   else if (number < 0.67) {
+       createSecondScene()
+   }
     
     
     // Else, call the function to create your third scene.
-    
+    else {
+        createThirdScene()
+    }
     
     
 }
