@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700i');
 #button-container {
     text-align: center;
 }
 
 h1 {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #383838;
+}
+body {
+    background-image: url("http://sarahlkaufman.com/wp-content/uploads/2015/07/clouds.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
